@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # Routes for the User resource:
   # CREATE
-  root "users#dashboard"
+  root "users#login"
   get "/users/new", :controller => "users", :action => "new"
   post "/create_user", :controller => "users", :action => "create"
 
