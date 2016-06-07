@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   # Routes for the User resource:
   # CREATE
-  root "users#index"
-  get "/therapists/new", :controller => "therapists", :action => "new"
-  post "/create_therapist", :controller => "therapists", :action => "create"
+  root "users#dashboard"
+  get "/users/new", :controller => "users", :action => "new"
+  post "/create_user", :controller => "users", :action => "create"
 
   # READ
   get "/therapists", :controller => "therapists", :action => "index"
