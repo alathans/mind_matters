@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h3>Completed Training #<%= @completed_training.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Date completed</dt>
+      <dd><%= @completed_training.date_completed %></dd>
+
+      <dt>Training</dt>
+      <dd><%= @completed_training.training_id %></dd>
+
+      <dt>Therapist</dt>
+      <dd><%= @completed_training.therapist_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/completed_trainings" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/completed_trainings/<%= @completed_training.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_completed_training/<%= @completed_training.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

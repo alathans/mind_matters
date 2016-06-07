@@ -1,0 +1,46 @@
+<!-- Validation failure messages -->
+<% if @therapist_credential.errors.any? %>
+  <% @therapist_credential.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Therapist Credential</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_therapist_credential" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for credential_id -->
+      <div class="form-group">
+        <label for="credential_id" class="control-label">
+          Credential
+        </label>
+
+        <input type="text" id="credential_id" name="credential_id" placeholder="Credential" class="form-control" value="<%= @therapist_credential.credential_id %>">
+      </div>
+
+      <!-- Label and input for therapist_id -->
+      <div class="form-group">
+        <label for="therapist_id" class="control-label">
+          Therapist
+        </label>
+
+        <input type="text" id="therapist_id" name="therapist_id" placeholder="Therapist" class="form-control" value="<%= @therapist_credential.therapist_id %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Therapist Credential
+      </button>
+      or
+      <a href="/therapist_credentials">Cancel</a>
+    </form>
+  </div>
+</div>

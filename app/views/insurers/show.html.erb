@@ -1,0 +1,25 @@
+<div class="page-header">
+  <h3>Insurer #<%= @insurer.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Insurer name</dt>
+      <dd><%= @insurer.insurer_name %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/insurers" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/insurers/<%= @insurer.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_insurer/<%= @insurer.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

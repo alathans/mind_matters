@@ -1,0 +1,55 @@
+<!-- Validation failure messages -->
+<% if @completed_training.errors.any? %>
+  <% @completed_training.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Completed Training #<%= @completed_training.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_completed_training/<%= @completed_training.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for date_completed -->
+      <div class="form-group">
+        <label for="date_completed" class="control-label">
+          Date completed
+        </label>
+
+        <input type="text" id="date_completed" name="date_completed" placeholder="Date completed" class="form-control" value="<%= @completed_training.date_completed %>">
+      </div>
+
+      <!-- Label and input for training_id -->
+      <div class="form-group">
+        <label for="training_id" class="control-label">
+          Training
+        </label>
+
+        <input type="text" id="training_id" name="training_id" placeholder="Training" class="form-control" value="<%= @completed_training.training_id %>">
+      </div>
+
+      <!-- Label and input for therapist_id -->
+      <div class="form-group">
+        <label for="therapist_id" class="control-label">
+          Therapist
+        </label>
+
+        <input type="text" id="therapist_id" name="therapist_id" placeholder="Therapist" class="form-control" value="<%= @completed_training.therapist_id %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Completed Training
+      </button>
+      or
+      <a href="/completed_trainings/<%= @completed_training.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

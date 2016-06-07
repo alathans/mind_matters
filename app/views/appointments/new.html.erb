@@ -1,0 +1,73 @@
+<!-- Validation failure messages -->
+<% if @appointment.errors.any? %>
+  <% @appointment.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Appointment</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_appointment" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for appointment_status -->
+      <div class="form-group">
+        <label for="appointment_status" class="control-label">
+          Appointment status
+        </label>
+
+        <input type="text" id="appointment_status" name="appointment_status" placeholder="Appointment status" class="form-control" value="<%= @appointment.appointment_status %>">
+      </div>
+
+      <!-- Label and input for duration_minutes -->
+      <div class="form-group">
+        <label for="duration_minutes" class="control-label">
+          Duration minutes
+        </label>
+
+        <input type="text" id="duration_minutes" name="duration_minutes" placeholder="Duration minutes" class="form-control" value="<%= @appointment.duration_minutes %>">
+      </div>
+
+      <!-- Label and input for datetime -->
+      <div class="form-group">
+        <label for="datetime" class="control-label">
+          Datetime
+        </label>
+
+        <input type="text" id="datetime" name="datetime" placeholder="Datetime" class="form-control" value="<%= @appointment.datetime %>">
+      </div>
+
+      <!-- Label and input for user_id -->
+      <div class="form-group">
+        <label for="user_id" class="control-label">
+          User
+        </label>
+
+        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @appointment.user_id %>">
+      </div>
+
+      <!-- Label and input for therapist_id -->
+      <div class="form-group">
+        <label for="therapist_id" class="control-label">
+          Therapist
+        </label>
+
+        <input type="text" id="therapist_id" name="therapist_id" placeholder="Therapist" class="form-control" value="<%= @appointment.therapist_id %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Appointment
+      </button>
+      or
+      <a href="/appointments">Cancel</a>
+    </form>
+  </div>
+</div>

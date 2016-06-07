@@ -1,0 +1,37 @@
+<!-- Validation failure messages -->
+<% if @specialty.errors.any? %>
+  <% @specialty.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Specialty</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_specialty" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for specialty_area -->
+      <div class="form-group">
+        <label for="specialty_area" class="control-label">
+          Specialty area
+        </label>
+
+        <input type="text" id="specialty_area" name="specialty_area" placeholder="Specialty area" class="form-control" value="<%= @specialty.specialty_area %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Specialty
+      </button>
+      or
+      <a href="/specialties">Cancel</a>
+    </form>
+  </div>
+</div>

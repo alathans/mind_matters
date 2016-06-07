@@ -1,0 +1,46 @@
+<!-- Validation failure messages -->
+<% if @therapist_specialty.errors.any? %>
+  <% @therapist_specialty.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Therapist Specialty</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_therapist_specialty" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for specialty_id -->
+      <div class="form-group">
+        <label for="specialty_id" class="control-label">
+          Specialty
+        </label>
+
+        <input type="text" id="specialty_id" name="specialty_id" placeholder="Specialty" class="form-control" value="<%= @therapist_specialty.specialty_id %>">
+      </div>
+
+      <!-- Label and input for therapist_id -->
+      <div class="form-group">
+        <label for="therapist_id" class="control-label">
+          Therapist
+        </label>
+
+        <input type="text" id="therapist_id" name="therapist_id" placeholder="Therapist" class="form-control" value="<%= @therapist_specialty.therapist_id %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Therapist Specialty
+      </button>
+      or
+      <a href="/therapist_specialties">Cancel</a>
+    </form>
+  </div>
+</div>

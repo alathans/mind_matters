@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h3>Accepted Insurance #<%= @accepted_insurance.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Insurer</dt>
+      <dd><%= @accepted_insurance.insurer_id %></dd>
+
+      <dt>Therapist</dt>
+      <dd><%= @accepted_insurance.therapist_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/accepted_insurances" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/accepted_insurances/<%= @accepted_insurance.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_accepted_insurance/<%= @accepted_insurance.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

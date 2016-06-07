@@ -1,0 +1,34 @@
+<div class="page-header">
+  <h3>Conversation #<%= @conversation.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Follow up items</dt>
+      <dd><%= @conversation.follow_up_items %></dd>
+
+      <dt>Body</dt>
+      <dd><%= @conversation.body %></dd>
+
+      <dt>Therapist</dt>
+      <dd><%= @conversation.therapist_id %></dd>
+
+      <dt>User</dt>
+      <dd><%= @conversation.user_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/conversations" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/conversations/<%= @conversation.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_conversation/<%= @conversation.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

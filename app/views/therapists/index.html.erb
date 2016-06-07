@@ -1,0 +1,46 @@
+<div class="page-header">
+  <h1>
+    Therapists
+    <a href="/therapists/new" class="btn btn-lg btn-success">New Therapist</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Bio</th>
+        <th>Education</th>
+        <th>National provider identifier</th>
+        <th>Photo</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Username</th>
+        <th>Last name</th>
+        <th>First name</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @therapists.each do |therapist| %>
+      <tr>
+        <td><%= therapist.bio %></td>
+        <td><%= therapist.education %></td>
+        <td><%= therapist.national_provider_identifier %></td>
+        <td><%= therapist.photo %></td>
+        <td><%= therapist.address %></td>
+        <td><%= therapist.email %></td>
+        <td><%= therapist.password %></td>
+        <td><%= therapist.username %></td>
+        <td><%= therapist.last_name %></td>
+        <td><%= therapist.first_name %></td>
+        <td>
+          <a href="/therapists/<%= therapist.id %>" class="btn btn-primary">Show</a>
+          <a href="/therapists/<%= therapist.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_therapist/<%= therapist.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

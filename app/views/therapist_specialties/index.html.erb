@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>
+    Therapist specialties
+    <a href="/therapist_specialties/new" class="btn btn-lg btn-success">New Therapist specialty</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Specialty</th>
+        <th>Therapist</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @therapist_specialties.each do |therapist_specialty| %>
+      <tr>
+        <td><%= therapist_specialty.specialty_id %></td>
+        <td><%= therapist_specialty.therapist_id %></td>
+        <td>
+          <a href="/therapist_specialties/<%= therapist_specialty.id %>" class="btn btn-primary">Show</a>
+          <a href="/therapist_specialties/<%= therapist_specialty.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_therapist_specialty/<%= therapist_specialty.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

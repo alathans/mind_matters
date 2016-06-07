@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h3>Therapist Availability #<%= @therapist_availability.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Time</dt>
+      <dd><%= @therapist_availability.time_id %></dd>
+
+      <dt>Therapist</dt>
+      <dd><%= @therapist_availability.therapist_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/therapist_availabilities" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/therapist_availabilities/<%= @therapist_availability.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_therapist_availability/<%= @therapist_availability.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

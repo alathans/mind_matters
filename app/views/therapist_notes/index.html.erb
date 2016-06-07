@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>
+    Therapist notes
+    <a href="/therapist_notes/new" class="btn btn-lg btn-success">New Therapist note</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Body</th>
+        <th>Appointment</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @therapist_notes.each do |therapist_note| %>
+      <tr>
+        <td><%= therapist_note.body %></td>
+        <td><%= therapist_note.appointment_id %></td>
+        <td>
+          <a href="/therapist_notes/<%= therapist_note.id %>" class="btn btn-primary">Show</a>
+          <a href="/therapist_notes/<%= therapist_note.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_therapist_note/<%= therapist_note.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

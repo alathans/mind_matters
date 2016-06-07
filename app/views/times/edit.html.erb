@@ -1,0 +1,37 @@
+<!-- Validation failure messages -->
+<% if @time.errors.any? %>
+  <% @time.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Time #<%= @time.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_time/<%= @time.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for time_slot -->
+      <div class="form-group">
+        <label for="time_slot" class="control-label">
+          Time slot
+        </label>
+
+        <input type="text" id="time_slot" name="time_slot" placeholder="Time slot" class="form-control" value="<%= @time.time_slot %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Time
+      </button>
+      or
+      <a href="/times/<%= @time.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

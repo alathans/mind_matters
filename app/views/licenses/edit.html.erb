@@ -1,0 +1,55 @@
+<!-- Validation failure messages -->
+<% if @license.errors.any? %>
+  <% @license.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit License #<%= @license.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_license/<%= @license.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for license_number -->
+      <div class="form-group">
+        <label for="license_number" class="control-label">
+          License number
+        </label>
+
+        <input type="text" id="license_number" name="license_number" placeholder="License number" class="form-control" value="<%= @license.license_number %>">
+      </div>
+
+      <!-- Label and input for state_id -->
+      <div class="form-group">
+        <label for="state_id" class="control-label">
+          State
+        </label>
+
+        <input type="text" id="state_id" name="state_id" placeholder="State" class="form-control" value="<%= @license.state_id %>">
+      </div>
+
+      <!-- Label and input for therapist_id -->
+      <div class="form-group">
+        <label for="therapist_id" class="control-label">
+          Therapist
+        </label>
+
+        <input type="text" id="therapist_id" name="therapist_id" placeholder="Therapist" class="form-control" value="<%= @license.therapist_id %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update License
+      </button>
+      or
+      <a href="/licenses/<%= @license.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

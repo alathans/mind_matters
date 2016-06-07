@@ -1,0 +1,46 @@
+<!-- Validation failure messages -->
+<% if @therapist_availability.errors.any? %>
+  <% @therapist_availability.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Therapist Availability #<%= @therapist_availability.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_therapist_availability/<%= @therapist_availability.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for time_id -->
+      <div class="form-group">
+        <label for="time_id" class="control-label">
+          Time
+        </label>
+
+        <input type="text" id="time_id" name="time_id" placeholder="Time" class="form-control" value="<%= @therapist_availability.time_id %>">
+      </div>
+
+      <!-- Label and input for therapist_id -->
+      <div class="form-group">
+        <label for="therapist_id" class="control-label">
+          Therapist
+        </label>
+
+        <input type="text" id="therapist_id" name="therapist_id" placeholder="Therapist" class="form-control" value="<%= @therapist_availability.therapist_id %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Therapist Availability
+      </button>
+      or
+      <a href="/therapist_availabilities/<%= @therapist_availability.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<!-- Validation failure messages -->
+<% if @accepted_insurance.errors.any? %>
+  <% @accepted_insurance.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Accepted Insurance</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_accepted_insurance" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for insurer_id -->
+      <div class="form-group">
+        <label for="insurer_id" class="control-label">
+          Insurer
+        </label>
+
+        <input type="text" id="insurer_id" name="insurer_id" placeholder="Insurer" class="form-control" value="<%= @accepted_insurance.insurer_id %>">
+      </div>
+
+      <!-- Label and input for therapist_id -->
+      <div class="form-group">
+        <label for="therapist_id" class="control-label">
+          Therapist
+        </label>
+
+        <input type="text" id="therapist_id" name="therapist_id" placeholder="Therapist" class="form-control" value="<%= @accepted_insurance.therapist_id %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Accepted Insurance
+      </button>
+      or
+      <a href="/accepted_insurances">Cancel</a>
+    </form>
+  </div>
+</div>

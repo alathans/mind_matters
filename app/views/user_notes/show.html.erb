@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h3>User Note #<%= @user_note.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Body</dt>
+      <dd><%= @user_note.body %></dd>
+
+      <dt>Appointment</dt>
+      <dd><%= @user_note.appointment_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/user_notes" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/user_notes/<%= @user_note.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_user_note/<%= @user_note.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

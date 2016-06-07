@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h3>Therapist Specialty #<%= @therapist_specialty.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Specialty</dt>
+      <dd><%= @therapist_specialty.specialty_id %></dd>
+
+      <dt>Therapist</dt>
+      <dd><%= @therapist_specialty.therapist_id %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/therapist_specialties" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/therapist_specialties/<%= @therapist_specialty.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_therapist_specialty/<%= @therapist_specialty.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

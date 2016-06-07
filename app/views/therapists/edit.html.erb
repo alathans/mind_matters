@@ -1,0 +1,118 @@
+<!-- Validation failure messages -->
+<% if @therapist.errors.any? %>
+  <% @therapist.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Therapist #<%= @therapist.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_therapist/<%= @therapist.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for bio -->
+      <div class="form-group">
+        <label for="bio" class="control-label">
+          Bio
+        </label>
+
+        <textarea id="bio" name="bio" placeholder="Bio" class="form-control" rows="3"><%= @therapist.bio %></textarea>
+      </div>
+
+      <!-- Label and input for education -->
+      <div class="form-group">
+        <label for="education" class="control-label">
+          Education
+        </label>
+
+        <input type="text" id="education" name="education" placeholder="Education" class="form-control" value="<%= @therapist.education %>">
+      </div>
+
+      <!-- Label and input for national_provider_identifier -->
+      <div class="form-group">
+        <label for="national_provider_identifier" class="control-label">
+          National provider identifier
+        </label>
+
+        <input type="text" id="national_provider_identifier" name="national_provider_identifier" placeholder="National provider identifier" class="form-control" value="<%= @therapist.national_provider_identifier %>">
+      </div>
+
+      <!-- Label and input for photo -->
+      <div class="form-group">
+        <label for="photo" class="control-label">
+          Photo
+        </label>
+
+        <input type="text" id="photo" name="photo" placeholder="Photo" class="form-control" value="<%= @therapist.photo %>">
+      </div>
+
+      <!-- Label and input for address -->
+      <div class="form-group">
+        <label for="address" class="control-label">
+          Address
+        </label>
+
+        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @therapist.address %>">
+      </div>
+
+      <!-- Label and input for email -->
+      <div class="form-group">
+        <label for="email" class="control-label">
+          Email
+        </label>
+
+        <input type="text" id="email" name="email" placeholder="Email" class="form-control" value="<%= @therapist.email %>">
+      </div>
+
+      <!-- Label and input for password -->
+      <div class="form-group">
+        <label for="password" class="control-label">
+          Password
+        </label>
+
+        <input type="text" id="password" name="password" placeholder="Password" class="form-control" value="<%= @therapist.password %>">
+      </div>
+
+      <!-- Label and input for username -->
+      <div class="form-group">
+        <label for="username" class="control-label">
+          Username
+        </label>
+
+        <input type="text" id="username" name="username" placeholder="Username" class="form-control" value="<%= @therapist.username %>">
+      </div>
+
+      <!-- Label and input for last_name -->
+      <div class="form-group">
+        <label for="last_name" class="control-label">
+          Last name
+        </label>
+
+        <input type="text" id="last_name" name="last_name" placeholder="Last name" class="form-control" value="<%= @therapist.last_name %>">
+      </div>
+
+      <!-- Label and input for first_name -->
+      <div class="form-group">
+        <label for="first_name" class="control-label">
+          First name
+        </label>
+
+        <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="<%= @therapist.first_name %>">
+      </div>
+
+      <button class="btn btn-warning">
+        Update Therapist
+      </button>
+      or
+      <a href="/therapists/<%= @therapist.id %>">Cancel</a>
+    </form>
+  </div>
+</div>
