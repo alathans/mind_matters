@@ -6,10 +6,6 @@ Rails.application.routes.draw do
   # Routes for the USER resource:
   # CREATE
 
-  get "/users/new", :controller => "users", :action => "new"
-  post "/create_user", :controller => "users", :action => "create"
-
-
   # READ
   get "/users/:id", :controller => "users", :action => "show"
 

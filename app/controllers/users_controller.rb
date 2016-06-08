@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def new
-  @user = current_user.id
+  @user = User.current_user.id
   @user.first_name = params[:first_name]
   @user.last_name = params[:last_name]
   @user.username = params[:username]
