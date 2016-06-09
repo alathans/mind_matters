@@ -34,4 +34,7 @@ Rails.application.routes.draw do
   get "/delete_therapist/:id", :controller => "therapists", :action => "destroy"
   #------------------------------
 
+  # Routes for the About Mind Matters (FAQs):
+  # READ
+  get "/about", :controller => "users", :action => "about"
 end

@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   def welcome
   end
 
+  def about
+  end
+
   def edit
     @user = User.find(params[:id])
     @user.first_name = params[:first_name]

@@ -1,8 +1,16 @@
 <div class="page-header">
   <h4> Welcome!</h4>
+
 <hr>
-<a href="users/<%= current_user.id%>/edit">Edit Full Account Details</a>
+<a href="/users/<%= current_user.id%>">My Profile</a>
+
 <hr>
-<a href="/users/<%= current_user.id%>">Go to My Dashboard</a>
+<a href="users/<%= current_user.id%>/edit">Edit Profile</a>
+
+<hr>
+<a href="/therapists">Browse Therapists</a>
+
+<hr>
+<a href="/about">About Mind Matters</a>
 
 </div>
