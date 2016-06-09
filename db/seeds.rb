@@ -23,8 +23,6 @@ csv.each do |row|
   t.education = row['education']
   t.bio = row['bio']
   t.save
-  puts "Therapist profile has been created for: #{first_name} #{last_name}."
 end
 
-puts "There are now #{Therapist.count} rows in the Therapists table"
-end
+  puts "There are now #{Therapist.count} rows in the Therapists table"

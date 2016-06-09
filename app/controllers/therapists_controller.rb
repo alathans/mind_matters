@@ -23,12 +23,8 @@ class TherapistsController < ApplicationController
     @therapist.username = params[:username]
     @therapist.last_name = params[:last_name]
     @therapist.first_name = params[:first_name]
-
-    if @therapist.save
-      redirect_to "/therapists", :notice => "Therapist created successfully."
-    else
-      render 'new'
-    end
+    @therapis.save
+    redirect_to "/therapists", :notice => "Therapist created successfully."
   end
 
   def edit
