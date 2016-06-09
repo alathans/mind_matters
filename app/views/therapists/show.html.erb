@@ -26,9 +26,35 @@
       <dt>Bio</dt>
       <dd><%= @therapist.bio %></dd>
 
+      <dt>Licences</dt>
+      <dd>
+          <% @therapist.licenses.each do |license| %>
+        <div><%= license.license_number %></div>
+          <% end %>
+      </dd>
+
+      <dt>States</dt>
+      <dd>
+          <% @therapist.states.each do |state| %>
+          <div><%= state.name %></div>
+          <% end %>
+      </dd>
+
+      <dt>Credentials</dt>
+      <dd>
+          <% @therapist.credentials.each do |credential| %>
+          <div><%= credential.name %></div>
+          <% end %>
+      </dd>
 
     </dl>
+  </div>
+</div>
 
+
+
+
+<!-- Buttons -->
     <div class="btn-group btn-group-justified">
       <a href="/therapists" class="btn btn-primary">
         Back

@@ -5,6 +5,7 @@ class TherapistsController < ApplicationController
 
   def show
     @therapist = Therapist.find(params[:id])
+    @licenses = @therapist.licenses
   end
 
   def new
