@@ -1,39 +1,41 @@
 <div class="page-header">
-  <h3>Therapist #<%= @therapist.id %></h3>
+  <h3><%= @therapist.first_name %> <%= @therapist.last_name %></h3>
 </div>
 
 <div class="row">
   <div class="col-md-12">
     <dl class="dl-horizontal">
-      <dt>Bio</dt>
-      <dd><%= @therapist.bio %></dd>
 
-      <dt>Education</dt>
-      <dd><%= @therapist.education %></dd>
-
-      <dt>National provider identifier</dt>
-      <dd><%= @therapist.national_provider_identifier %></dd>
-
-      <dt>Photo</dt>
-      <dd><%= @therapist.photo %></dd>
-
-      <dt>Address</dt>
-      <dd><%= @therapist.address %></dd>
-
-      <dt>Email</dt>
-      <dd><%= @therapist.email %></dd>
-
-      <dt>Password</dt>
-      <dd><%= @therapist.password %></dd>
-
-      <dt>Username</dt>
-      <dd><%= @therapist.username %></dd>
+      <dt>First name</dt>
+      <dd><%= @therapist.first_name %></dd>
 
       <dt>Last name</dt>
       <dd><%= @therapist.last_name %></dd>
 
-      <dt>First name</dt>
-      <dd><%= @therapist.first_name %></dd>
+      <dt>Username</dt>
+      <dd><%= @therapist.username %></dd>
+
+      <dt>Password</dt>
+      <dd><%= @therapist.password %></dd>
+
+      <dt>Email</dt>
+      <dd><%= @therapist.email %></dd>
+
+      <dt>Address</dt>
+      <dd><%= @therapist.address %></dd>
+
+      <dt>Photo</dt>
+      <dd><%= @therapist.photo %></dd>
+
+      <dt>National provider identifier</dt>
+      <dd><%= @therapist.national_provider_identifier %></dd>
+
+      <dt>Education</dt>
+      <dd><%= @therapist.education %></dd>
+
+      <dt>Bio</dt>
+      <dd><%= @therapist.bio %></dd>
+
 
     </dl>
 
@@ -44,9 +46,7 @@
       <a href="/therapists/<%= @therapist.id %>/edit" class="btn btn-warning">
         Edit
       </a>
-      <a href="/delete_therapist/<%= @therapist.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
+
     </div>
   </div>
 </div>

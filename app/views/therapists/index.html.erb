@@ -1,6 +1,6 @@
 <div class="page-header">
   <h1>
-    Find a Therapist
+    Browse Therapists
   </h1>
 </div>
 
@@ -12,15 +12,15 @@
       <tr>
         <td><%= therapist.first_name %> <%= therapist.last_name %></td>
         <td><%= therapist.photo %></td>
-        <td><%= therapist.bio %></td>
-        <td><%= therapist.education %></td>
-        <td><%= therapist.national_provider_identifier %></td>
-        <td><%= therapist.address %></td>
-        <td><%= therapist.email %></td>
 
         <td>
-          <a href="/therapists/<%= therapist.id %>" class="btn btn-primary">Show Detail</a>
+          <a href="/therapists/<%= therapist.id %>" class="btn btn-primary">Show Details</a>
         </td>
+
+        <td>
+          <a href="/therapists/<%= therapist.id %>/edit" class="btn btn-warning">Edit Details</a>
+        </td>
+
       </tr>
       <% end %>
     </table>
