@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h3><%= current_user.first_name %>'s Dashboard</h3>
+  <h3><%= current_user.first_name %>'s Profile</h3>
 </div>
 
 <div class="row">
@@ -42,10 +42,24 @@
 
     </dl>
 
-    <div class="btn-group btn-group-justified">
-      <a href="/users/<%= current_user.id %>/edit" class="btn btn-primary">
-        Edit
-      </a>
+<div class="row how-to-heading text-center padding-inside-top-sm">
+  <div class="col-xs-12">
+
+    <div class="col-md-6">
+      <div class="btn-group btn-group-justified">
+        <a href="/therapists" class="btn btn-primary">
+            Browse Therapists Now
+        </a>
+      </div>
     </div>
+
+    <div class="col-md-6">
+      <div class="btn-group btn-group-justified">
+        <a href="/users/<%= current_user.id %>/edit" class="btn btn-warning">
+          Edit Account Details
+        </a>
+      </div>
+    </div>
+
   </div>
 </div>
