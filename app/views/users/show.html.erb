@@ -15,27 +15,35 @@
       <dt>Username</dt>
       <dd><%= current_user.username %></dd>
 
-      <dt>Password</dt>
-      <dd><%= current_user.password %></dd>
-
       <dt>Email</dt>
       <dd><%= current_user.email %></dd>
-
-      <dt>Photo</dt>
-      <dd><%= current_user.photo %></dd>
 
       <dt>Address</dt>
       <dd><%= current_user.address %></dd>
 
+      <dt>Branch</dt>
+      <dd><%= current_user.branch %></dd>
 
+      <dt>Occupational Specialty</dt>
+      <dd><%= current_user.occupational_specialty %></dd>
 
+      <dt>Last Rank</dt>
+      <dd><%= current_user.last_rank %></dd>
 
+      <dt>Years of Service</dt>
+      <dd><%= current_user.years_of_service %></dd>
+
+      <dt>Months Deployed</dt>
+      <dd><%= current_user.months_deployed  %></dd>
+
+      <dt>Location Deployed</dt>
+      <dd><%= current_user.location_deployed  %></dd>
 
 
     </dl>
 
     <div class="btn-group btn-group-justified">
-      <a href="/users/<%= current_user.id %>/edit" class="btn btn-warning">
+      <a href="/users/<%= current_user.id %>/edit" class="btn btn-primary">
         Edit
       </a>
     </div>
