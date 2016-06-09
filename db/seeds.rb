@@ -10,4 +10,21 @@ require 'csv'
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'therapists.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-puts csv
+csv.each do |row|
+  t = Therapist.new
+  t.first_name = row['first_name']
+  t.last_name = row['last_name']
+  t.username = row['username']
+  t.password = row['password']
+  t.email = row['email']
+  t.address = row['address']
+  t.photo = row['photo']
+  t.national_provider_identifier = row['national_provider_identifier']
+  t.education = row['education']
+  t.bio = row['bio']
+  t.save
+  puts "Therapist profile has been created for: #{first_name} #{last_name}."
+end
+
+puts "There are now #{Therapist.count} rows in the Therapists table"
+end
