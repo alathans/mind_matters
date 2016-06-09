@@ -33,7 +33,6 @@ class TherapistsController < ApplicationController
 
   def update
     @therapist = Therapist.find(params[:id])
-
     @therapist.bio = params[:bio]
     @therapist.education = params[:education]
     @therapist.national_provider_identifier = params[:national_provider_identifier]
@@ -44,12 +43,8 @@ class TherapistsController < ApplicationController
     @therapist.username = params[:username]
     @therapist.last_name = params[:last_name]
     @therapist.first_name = params[:first_name]
-
-    if @therapist.save
-      redirect_to "/therapists", :notice => "Therapist updated successfully."
-    else
-      render 'edit'
-    end
+    @therapist.save
+    redirect_to "/therapists", :notice => "Therapist updated successfully."
   end
 
   def destroy
