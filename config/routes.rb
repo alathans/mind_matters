@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get "/users/:id/edit", :controller => "users", :action => "edit"
   post "/update_user/:id", :controller => "users", :action => "update"
 
-  # DELETE
-  get "/delete_user/:id", :controller => "users", :action => "destroy"
+  # # DELETE - Not allowing this for now so don't accidentally delete sample user accounts.
+  # get "/delete_user/:id", :controller => "users", :action => "destroy"
   #------------------------------
 
   # Routes for the Therapist resource:
