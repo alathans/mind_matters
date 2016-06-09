@@ -41,24 +41,27 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="/users/<%= current_user.id %>">
-              <i class="fa fa-fw fa-users"></i>
-              <span class="hidden-sm">
-                View Account Details
-              </span>
-            </a>
-          </li>
 
-          <li>
-            <a href="/users/<%= current_user.id %>/edit">
-              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-              <span class="hidden-sm">
-                Edit Account Details
-              </span>
-            </a>
-          </li>
+        <ul class="nav navbar-nav">
+          <% if current_user.present? %>
+            <li>
+              <a href="/users/<%= current_user.id %>">
+                <i class="fa fa-fw fa-users"></i>
+                <span class="hidden-sm">
+                  View Account Details
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/users/<%= current_user.id %>/edit">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <span class="hidden-sm">
+                  Edit Account Details
+                </span>
+              </a>
+            </li>
+          <% end %>
 
           <li>
             <a href="/about">
