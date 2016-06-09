@@ -47,6 +47,13 @@
           <% end %>
       </dd>
 
+      <dt>Accepted Insurance</dt>
+      <dd>
+          <% @therapist.insurers.each do |insurance| %>
+          <div><%= insurance.insurer_name %></div>
+          <% end %>
+      </dd>
+
     </dl>
   </div>
 </div>
