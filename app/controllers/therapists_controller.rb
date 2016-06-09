@@ -49,7 +49,6 @@ class TherapistsController < ApplicationController
 
   def destroy
     @therapist = Therapist.find(params[:id])
-
     @therapist.destroy
 
     redirect_to "/therapists", :notice => "Therapist deleted."
