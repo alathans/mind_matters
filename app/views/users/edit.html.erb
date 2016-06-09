@@ -17,7 +17,7 @@
           First name
         </label>
 
-        <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="<%= @user.first_name %>">
+        <input type="text" id="first_name" name="first_name" placeholder="First name" class="form-control" value="<%= current_user.first_name %>">
       </div>
 
         <input type="hidden" id="user_id" name="user_id" value="<%= current_user.id %>">
@@ -29,7 +29,7 @@
           Last name
         </label>
 
-        <input type="text" id="last_name" name="last_name" placeholder="Last name" class="form-control" value="<%= @user.last_name %>">
+        <input type="text" id="last_name" name="last_name" placeholder="Last name" class="form-control" value="<%= current_user.last_name %>">
       </div>
 
       <!-- Label and input for username -->
@@ -38,16 +38,7 @@
           Username
         </label>
 
-        <input type="text" id="username" name="username" placeholder="Username" class="form-control" value="<%= @user.username %>">
-      </div>
-
-      <!-- Label and input for password -->
-      <div class="form-group">
-        <label for="password" class="control-label">
-          Password
-        </label>
-
-        <input type="text" id="password" name="password" placeholder="Password" class="form-control" value="<%= @user.password %>">
+        <input type="text" id="username" name="username" placeholder="Username" class="form-control" value="<%= current_user.username %>">
       </div>
 
       <!-- Label and input for email -->
@@ -56,7 +47,7 @@
           Email
         </label>
 
-        <input type="text" id="email" name="email" placeholder="Email" class="form-control" value="<%= @user.email %>">
+        <input type="text" id="email" name="email" placeholder="Email" class="form-control" value="<%= current_user.email %>">
       </div>
 
       <!-- Label and input for address -->
@@ -65,12 +56,66 @@
           Address
         </label>
 
-        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @user.address %>">
+        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= current_user.address %>">
       </div>
 
 
+      <!-- Label and input for branch -->
+      <div class="form-group">
+        <label for="branch" class="control-label">
+          Branch
+        </label>
 
-      <button class="btn btn-warning">
+        <input type="text" id="last_name" name="branch" placeholder="Branch" class="form-control" value="<%= current_user.branch %>">
+      </div>
+
+
+      <!-- Label and input for MOS -->
+      <div class="form-group">
+        <label for="occupational_specialty" class="control-label">
+          Military Occupational Specialty (MOS)
+        </label>
+
+        <input type="text" id="last_name" name="occupational_specialty" placeholder="Occupational specialty" class="form-control" value="<%= current_user.occupational_specialty %>">
+      </div>
+
+      <!-- Label and input for last rank -->
+      <div class="form-group">
+        <label for="last_rank" class="control-label">
+          Last rank
+        </label>
+
+        <input type="text" id="last_name" name="last_rank" placeholder="Last rank" class="form-control" value="<%= current_user.last_rank %>">
+      </div>
+
+      <!-- Label and input for Years of Service-->
+      <div class="form-group">
+        <label for="years_of_service" class="control-label">
+          Years of Service
+        </label>
+
+        <input type="text" id="last_name" name="years_of_service" placeholder="Years of service" class="form-control" value="<%= current_user.years_of_service %>">
+      </div>
+
+      <!-- Label and input for Months Deployed-->
+      <div class="form-group">
+        <label for="months_deployed" class="control-label">
+          Months Deployed
+        </label>
+
+        <input type="text" id="last_name" name="months_deployed" placeholder="Months Deployed" class="form-control" value="<%= current_user.months_deployed %>">
+      </div>
+
+      <!-- Label and input for Location Deployed-->
+      <div class="form-group">
+        <label for="location_deployed" class="control-label">
+          Location Deployed
+        </label>
+
+        <input type="text" id="last_name" name="location_deployed" placeholder="location Deployed" class="form-control" value="<%= current_user.location_deployed %>">
+      </div>
+
+      <button class="btn btn-primary">
         Update
       </button>
       or
