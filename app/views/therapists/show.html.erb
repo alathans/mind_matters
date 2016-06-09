@@ -6,17 +6,10 @@
   <div class="col-md-12">
     <dl class="dl-horizontal">
 
-      <dt>First name</dt>
-      <dd><%= @therapist.first_name %></dd>
-
-      <dt>Last name</dt>
-      <dd><%= @therapist.last_name %></dd>
-
-      <dt>Username</dt>
-      <dd><%= @therapist.username %></dd>
-
-      <dt>Password</dt>
-      <dd><%= @therapist.password %></dd>
+      <dt>Photo</dt>
+      <dd>
+            <td><img src="/assets/<%= @therapist.photo %>" height="200px" /></td>
+      </dd>
 
       <dt>Email</dt>
       <dd><%= @therapist.email %></dd>
@@ -24,10 +17,7 @@
       <dt>Address</dt>
       <dd><%= @therapist.address %></dd>
 
-      <dt>Photo</dt>
-      <dd><%= @therapist.photo %></dd>
-
-      <dt>National provider identifier</dt>
+      <dt>Nat'l Provider Identifier</dt>
       <dd><%= @therapist.national_provider_identifier %></dd>
 
       <dt>Education</dt>
