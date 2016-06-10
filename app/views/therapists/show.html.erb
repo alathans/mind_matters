@@ -32,6 +32,13 @@
           <% end %>
       </dd>
 
+      <dt>Completed Trainings</dt>
+      <dd>
+          <% @therapist.trainings.each do |training| %>
+          <div><%= training.name %></div>
+          <% end %>
+      </dd>
+
       <dt>Email</dt>
       <dd><%= @therapist.email %></dd>
 
