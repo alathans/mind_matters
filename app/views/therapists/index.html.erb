@@ -10,8 +10,18 @@
 
       <% @therapists.each do |therapist| %>
       <tr>
-        <td><%= therapist.first_name %> <%= therapist.last_name %></td>
-        <td><img src="/assets/<%= therapist.photo %>" height="100px" /></td>
+        <td>
+          <%= therapist.first_name %> <%= therapist.last_name %>
+        </td>
+
+        <td>
+          <img src="/assets/<%= therapist.photo %>" height="100px" />
+        </td>
+
+        <td>
+          <!-- <%= therapist.credentials %> -->
+        </td>
+
 
         <td>
           <a href="/therapists/<%= therapist.id %>" class="btn btn-primary">Show Details</a>

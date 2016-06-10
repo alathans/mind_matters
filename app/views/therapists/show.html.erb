@@ -11,28 +11,6 @@
             <td><img src="/assets/<%= @therapist.photo %>" height="200px" /></td>
       </dd>
 
-      <dt>Email</dt>
-      <dd><%= @therapist.email %></dd>
-
-      <dt>Address</dt>
-      <dd><%= @therapist.address %></dd>
-
-      <dt>Nat'l Provider Identifier</dt>
-      <dd><%= @therapist.national_provider_identifier %></dd>
-
-      <dt>Education</dt>
-      <dd><%= @therapist.education %></dd>
-
-      <dt>Bio</dt>
-      <dd><%= @therapist.bio %></dd>
-
-      <dt>Licence Numbers</dt>
-      <dd>
-          <% @therapist.licenses.each do |license| %>
-        <div><%= license.license_number %></div>
-          <% end %>
-      </dd>
-
       <dt>States</dt>
       <dd>
           <% @therapist.states.each do |state| %>
@@ -54,6 +32,22 @@
           <% end %>
       </dd>
 
+      <dt>Email</dt>
+      <dd><%= @therapist.email %></dd>
+
+      <dt>Address</dt>
+      <dd><%= @therapist.address %></dd>
+
+      <dt>Nat'l Provider Identifier</dt>
+      <dd><%= @therapist.national_provider_identifier %></dd>
+
+      <dt>Education</dt>
+      <dd><%= @therapist.education %></dd>
+
+      <dt>Bio</dt>
+      <dd><%= @therapist.bio %></dd>
+
+
     </dl>
   </div>
 </div>
@@ -71,5 +65,16 @@
       </a>
 
     </div>
+  </div>
+</div>
+
+
+<hr>
+
+<div class="row footer padding-inside-top-md padding-inside-bottom-md">
+<div class="col-md-12 text-center">
+  <p>
+    For more information, please contact us at <b>info@mind-matters.us</b>
+  </p>
   </div>
 </div>
