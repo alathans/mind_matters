@@ -43,7 +43,15 @@ Rails.application.routes.draw do
   # Routes for Sending Therapist a Message
   # CREATE
   get "/therapists/:id/message", :controller => "conversations", :action => "new"
-  post "/create_message", :controller => "conversations", :action => "create"
+  post "/create_conversation", :controller => "conversations", :action => "create"
+
+  # READ
+  get "/conversations/index", :controller => "conversations", :action => "index"
+  get "/conversation/:id", :controller => "conversations", :action => "show"
+
+  # DELETE
+  get "/delete_conversation/:id", :controller => "conversations", :action => "destroy"
+
 
 
 end

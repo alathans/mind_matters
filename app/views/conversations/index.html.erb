@@ -1,30 +1,29 @@
 <div class="page-header">
-  <h1>
-    Conversations
-    <a href="/conversations/new" class="btn btn-lg btn-success">New Conversation</a>
-  </h1>
+  <h3>
+    My Messages
+  </h3>
 </div>
 
 <div class="row">
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-        <th>Follow up items</th>
-        <th>Body</th>
-        <th>Therapist</th>
-        <th>User</th>
-        <th>Actions</th>
+        <th>Message</th>
+        <th>Therapist ID</th>
+        <th></th>
       </tr>
 
-      <% @conversations.each do |conversation| %>
+<!-- Wanted to get it to pull the name here but couldn't get it to work, even though in my assocations I have that a conversation belongs to a therapist. Want to fix that at some point.-->
+
+      <% @convos.each do |conversation| %>
       <tr>
-        <td><%= conversation.follow_up_items %></td>
         <td><%= conversation.body %></td>
-        <td><%= conversation.therapist_id %></td>
-        <td><%= conversation.user_id %></td>
+        <td><%= conversation.therapist_id %>
+        </td>
+
+        </td>
         <td>
-          <a href="/conversations/<%= conversation.id %>" class="btn btn-primary">Show</a>
-          <a href="/conversations/<%= conversation.id %>/edit" class="btn btn-warning">Edit</a>
+          <!-- <a href="/conversations/<%= conversation.id %>/edit" class="btn btn-warning">Edit</a> -->
           <a href="/delete_conversation/<%= conversation.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
       </tr>
