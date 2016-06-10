@@ -100,7 +100,7 @@
 # t.therapist_id = "10"
 # t.credential_id = "15"
 # t.save
-
+#
 # t = TherapistCredential.new
 # t.therapist_id = "4"
 # t.credential_id = "15"
@@ -165,12 +165,6 @@ l.save
 
 l = License.new
 l.state_id = "3"
-l.therapist_id = "9"
-l.license_number = "131762861"
-l.save
-
-l = License.new
-l.state_id = "3"
 l.therapist_id = "1"
 l.license_number = "940163618"
 l.save
@@ -195,7 +189,7 @@ l.save
 
 l = License.new
 l.state_id = "5"
-l.therapist_id = "7"
+l.therapist_id = "9"
 l.license_number = "826092145"
 l.save
 
@@ -217,11 +211,6 @@ l.therapist_id = "2"
 l.license_number = "348830780"
 l.save
 
-l = License.new
-l.state_id = "7"
-l.therapist_id = "3"
-l.license_number = "563628523"
-l.save
 
 l = License.new
 l.state_id = "7"
@@ -564,219 +553,219 @@ l.save
 # t.description = "To follow"
 # t.save
 
-# Data for COMPLTED TRAININGS (Join Model)
-
-c = CompletedTraining.new
-c.therapist_id = "1"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "1"
-c.training_id = "2"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "1"
-c.training_id = "3"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "1"
-c.training_id = "6"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "1"
-c.training_id = "8"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "2"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "2"
-c.training_id = "3"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "2"
-c.training_id = "7"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "2"
-c.training_id = "11"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "3"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "3"
-c.training_id = "3"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "3"
-c.training_id = "4"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "3"
-c.training_id = "5"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "3"
-c.training_id = "7"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "4"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "4"
-c.training_id = "2"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "4"
-c.training_id = "9"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "5"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "5"
-c.training_id = "2"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "5"
-c.training_id = "3"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "5"
-c.training_id = "4"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "5"
-c.training_id = "10"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "6"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "6"
-c.training_id = "3"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "6"
-c.training_id = "5"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "6"
-c.training_id = "9"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "7"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "7"
-c.training_id = "4"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "7"
-c.training_id = "10"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "8"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "8"
-c.training_id = "2"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "8"
-c.training_id = "5"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "8"
-c.training_id = "12"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "9"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "9"
-c.training_id = "2"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "9"
-c.training_id = "3"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "9"
-c.training_id = "8"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "9"
-c.training_id = "12"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "10"
-c.training_id = "1"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "10"
-c.training_id = "2"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "10"
-c.training_id = "6"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "10"
-c.training_id = "11"
-c.save
-
-c = CompletedTraining.new
-c.therapist_id = "10"
-c.training_id = "13"
-c.save
+# # Data for COMPLTED TRAININGS (Join Model)
+#
+# c = CompletedTraining.new
+# c.therapist_id = "1"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "1"
+# c.training_id = "2"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "1"
+# c.training_id = "3"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "1"
+# c.training_id = "6"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "1"
+# c.training_id = "8"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "2"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "2"
+# c.training_id = "3"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "2"
+# c.training_id = "7"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "2"
+# c.training_id = "11"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "3"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "3"
+# c.training_id = "3"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "3"
+# c.training_id = "4"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "3"
+# c.training_id = "5"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "3"
+# c.training_id = "7"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "4"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "4"
+# c.training_id = "2"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "4"
+# c.training_id = "9"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "5"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "5"
+# c.training_id = "2"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "5"
+# c.training_id = "3"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "5"
+# c.training_id = "4"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "5"
+# c.training_id = "10"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "6"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "6"
+# c.training_id = "3"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "6"
+# c.training_id = "5"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "6"
+# c.training_id = "9"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "7"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "7"
+# c.training_id = "4"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "7"
+# c.training_id = "10"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "8"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "8"
+# c.training_id = "2"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "8"
+# c.training_id = "5"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "8"
+# c.training_id = "12"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "9"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "9"
+# c.training_id = "2"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "9"
+# c.training_id = "3"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "9"
+# c.training_id = "8"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "9"
+# c.training_id = "12"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "10"
+# c.training_id = "1"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "10"
+# c.training_id = "2"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "10"
+# c.training_id = "6"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "10"
+# c.training_id = "11"
+# c.save
+#
+# c = CompletedTraining.new
+# c.therapist_id = "10"
+# c.training_id = "13"
+# c.save
