@@ -16,7 +16,7 @@
           <img src="/assets/<%= therapist.photo %>" height="150px" />
         </td>
 
-        <td><b><%= therapist.first_name %> <%= therapist.last_name %></b>
+        <td><h5><b><%= therapist.first_name %> <%= therapist.last_name %></b></h5>
         </td>
 
         <td><b>Credentials:</b>
@@ -32,14 +32,20 @@
          <% end %>
         </td>
 
+        <td><b>Accepted Insurance:</b>
+         <% therapist.insurers.each do |insurer| %>
+         <div><%= insurer.insurer_name %></div>
+         <% end %>
+        </td>
+
         <td>
           <a href="/therapists/<%= therapist.id %>" class="btn btn-primary">Show Details</a>
         </td>
 
-        <td>
+        <!-- <td>
           <a href="/therapists/<%= therapist.id %>/edit" class="btn btn-warning">Edit Details</a>
         </td>
-        <td>
+        <td> -->
         <!-- <a href="/delete_therapist/<%= therapist.id %>" class="btn btn-danger">
           Delete
         </a> -->

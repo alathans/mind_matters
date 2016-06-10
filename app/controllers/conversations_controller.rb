@@ -9,9 +9,11 @@ class ConversationsController < ApplicationController
 
   def new
     @conversation = Conversation.new
+    @therapist = Therapist.find(params[:id])
   end
 
   def create
+    @therapist = Therapist.find(params[:id])
     @conversation = Conversation.new
     @conversation.follow_up_items = params[:follow_up_items]
     @conversation.body = params[:body]
@@ -19,9 +21,9 @@ class ConversationsController < ApplicationController
     @conversation.user_id = params[:user_id]
 
     if @conversation.save
-      redirect_to "/conversations", :notice => "Conversation created successfully."
+      redirect_to "/therapists", :notice => "Your message has been sent!"
     else
-      render 'new'
+      redirect_to "/therapists/<%= @therapist.id %>"
     end
   end
 
@@ -46,7 +48,6 @@ class ConversationsController < ApplicationController
 
   def destroy
     @conversation = Conversation.find(params[:id])
-
     @conversation.destroy
 
     redirect_to "/conversations", :notice => "Conversation deleted."

@@ -37,4 +37,13 @@ Rails.application.routes.draw do
   # Routes for the About Mind Matters (FAQs):
   # READ
   get "/about", :controller => "users", :action => "about"
+
+  #------------------------------
+
+  # Routes for Sending Therapist a Message
+  # CREATE
+  get "/therapists/:id/message", :controller => "conversations", :action => "new"
+  post "/create_message", :controller => "conversations", :action => "create"
+
+
 end
