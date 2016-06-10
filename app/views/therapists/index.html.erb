@@ -10,18 +10,28 @@
 
       <% @therapists.each do |therapist| %>
       <tr>
-        <td>
-          <%= therapist.first_name %> <%= therapist.last_name %>
-        </td>
 
         <td>
           <img src="/assets/<%= therapist.photo %>" height="100px" />
         </td>
 
         <td>
-          <!-- <%= therapist.credentials %> -->
+          <%= therapist.first_name %> <%= therapist.last_name %>
         </td>
 
+        <td>
+         <% therapist.credentials.each do |credential| %>
+         <div><%= credential.name %></div>
+         <% end %>
+        </td>
+
+
+<!-- NOT SHOWING CURRENTLY but keep in so can filter by state data if needed -->
+        <td>
+         <% therapist.states.each do |state| %>
+         <div><% state.name %></div>
+         <% end %>
+        </td>
 
         <td>
           <a href="/therapists/<%= therapist.id %>" class="btn btn-primary">Show Details</a>
@@ -39,5 +49,15 @@
       </tr>
       <% end %>
     </table>
+  </div>
+</div>
+
+<hr>
+
+<div class="row footer padding-inside-top-md padding-inside-bottom-md">
+<div class="col-md-12 text-center">
+  <p>
+    For more information, please contact us at <b>info@mind-matters.us</b>
+  </p>
   </div>
 </div>
