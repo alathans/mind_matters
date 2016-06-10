@@ -4,62 +4,74 @@
 
 <div class="row">
   <div class="col-md-12">
-    <dl class="dl-horizontal">
 
-      <dt>Photo</dt>
+    <div class="col-md-4 text-center">
+
       <dd>
-            <td><img src="/assets/<%= @therapist.photo %>" height="200px" /></td>
+            <td><img src="/assets/<%= @therapist.photo %>" height="300px" /></td>
       </dd>
 
-      <dt>States</dt>
+      <dd>Contact <%= @therapist.first_name %>:</dd>
+      <dd> <a href="<%= @therapist.email %></dd>">    <%= @therapist.email %></dd></a>
+
+    </div>
+
+  <div class="col-md-8">
+    <dl class="dl-right">
+
+      <dt>Credentials:</dt>
       <dd>
-          <% @therapist.states.each do |state| %>
-          <div><%= state.name %></div>
-          <% end %>
+        <% @therapist.credentials.each do |credential| %><div><%= credential.name %></div>
+            <% end %>
       </dd>
-
-      <dt>Credentials</dt>
-      <dd>
-          <% @therapist.credentials.each do |credential| %>
-          <div><%= credential.name %></div>
-          <% end %>
-      </dd>
-
-      <dt>Accepted Insurance</dt>
-      <dd>
-          <% @therapist.insurers.each do |insurance| %>
-          <div><%= insurance.insurer_name %></div>
-          <% end %>
-      </dd>
-
-      <dt>Completed Trainings</dt>
-      <dd>
-          <% @therapist.trainings.each do |training| %>
-          <div><%= training.name %></div>
-          <% end %>
-      </dd>
-
-      <dt>Email</dt>
-      <dd><%= @therapist.email %></dd>
-
-      <dt>Address</dt>
-      <dd><%= @therapist.address %></dd>
-
-      <dt>Nat'l Provider Identifier</dt>
-      <dd><%= @therapist.national_provider_identifier %></dd>
-
-      <dt>Education</dt>
-      <dd><%= @therapist.education %></dd>
-
-      <dt>Bio</dt>
+<hr>
+      <dt>Bio:</dt>
       <dd><%= @therapist.bio %></dd>
-
+<hr>
+      <dt>Education:</dt>
+      <dd><%= @therapist.education %></dd>
 
     </dl>
   </div>
 </div>
+</div>
+
+<hr>
+<div class="row padding-inside-top-sm padding-inside-bottom-sm">
+
+  <div class="col-xs-12">
+
+    <div class="col-md-3 text-center">
+      <h5>Licensed States</h5>
+      <p>
+        <% @therapist.states.each do |state| %>
+        <div><%= state.name %></div>
+        <% end %>
+      </p>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <h5>Completed Trainings</h5>
+        <p>
+          <% @therapist.trainings.each do |training| %>
+          <div><%= training.name %></div>
+          <% end %>
+        </p>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <h5>Accepted Insurance</h5>
+          <p>
+            <% @therapist.insurers.each do |insurance| %>
+            <div><%= insurance.insurer_name %></div>
+            <% end %>
+          </p>
+          </div>
 
 
+
+  </div>
+</div>
 
 
 <!-- Buttons -->
