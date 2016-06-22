@@ -6,6 +6,9 @@ class UsersController < ApplicationController
   def about
   end
 
+  def landing
+  end
+
   def edit
     @user = User.find(params[:id])
     @user.first_name = params[:first_name]

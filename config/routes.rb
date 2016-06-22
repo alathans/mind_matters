@@ -38,6 +38,9 @@ Rails.application.routes.draw do
   # READ
   get "/about", :controller => "users", :action => "about"
 
+  # Routes for the About Mind Matters (FAQs):
+  # READ
+  get "/landing", :controller => "users", :action => "landing"
   #------------------------------
 
   # Routes for Sending Therapist a Message
