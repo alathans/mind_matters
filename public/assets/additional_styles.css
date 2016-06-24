@@ -1,12 +1,12 @@
 /* Backgrounds for each section of the page */
 
-.hero {
+/*.hero {
   background-image: url("/assets/mm_logo.png");
-  background-size: 60% auto;
+  background-size: 75% auto;
   text-align: center;
   color: white;
-  padding-top: 150px
-}
+  padding-top: 75px
+}*/
 
 /* Miscellaneous */
 
@@ -23,6 +23,9 @@
   width: 50px;
 }
 
+.title-grey {
+  background-color: rgb(217, 217, 217);
+}
 
 /* My standard vertical spacing classes */
 
